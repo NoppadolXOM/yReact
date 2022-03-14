@@ -12,6 +12,8 @@ import { EventType, InteractionType } from "@azure/msal-browser";
 import { b2cPolicies } from "./authConfig";
 import { PageLayout } from "./components/PageLayout";
 import { Hello } from "./pages/Hello";
+import thirdFloor from './HRH/HRH3Floor';
+import Home from './Home'
 
 import "./styles/App.css";
 
@@ -77,6 +79,8 @@ const Pages = () => {
       <Route path="/hello">
         <Hello />
       </Route>
+      <Route path='/buildings/hrh/3rdfloor' exact component={thirdFloor} />
+      <Route path='/buildings' exact component={Home} />
     </Switch>
   )
 }
